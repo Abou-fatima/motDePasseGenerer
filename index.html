@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENERATEUR DE MOT DE PASSE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+        <h1>🔐 Générateur de Mot de Passe</h1>
+        
+        <div class="password-display">
+            <input type="text" id="passwordOutput" placeholder="Votre mot de passe apparaîtra ici..." readonly>
+            <button class="copy-btn" id="copyBtn">Copier</button>
+        </div>
+        <div id="copyMessage" class="copy-message"></div>
+
+        <div class="options">
+            <div class="option-group">
+                <label for="lengthSlider">Longueur du mot de passe:</label>
+                <div class="slider-container">
+                    <input type="range" id="lengthSlider" class="slider" min="4" max="50" value="12">
+                </div>
+                <div class="length-display" id="lengthDisplay">12</div>
+            </div>
+
+            <div class="checkboxes">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="uppercase" checked>
+                    <label for="uppercase">Majuscules (A-Z)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="lowercase" checked>
+                    <label for="lowercase">Minuscules (a-z)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="numbers" checked>
+                    <label for="numbers">Chiffres (0-9)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="symbols" checked>
+                    <label for="symbols">Symboles (!@#$%)</label>
+                </div>
+            </div>
+        </div>
+
+        <button class="generate-btn" id="generateBtn">Générer un Mot de Passe</button>
+
+        <div class="strength-meter">
+            <div class="strength-label" id="strengthLabel">Force du mot de passe</div>
+            <div class="strength-bar">
+                <div class="strength-fill" id="strengthFill"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
